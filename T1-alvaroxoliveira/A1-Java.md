@@ -2,7 +2,7 @@
 
 # Linguagem 1 - Java
 
-## Modelo de tradução
+### Modelo de tradução
 
 <body style="text-align: justify">
     <p>
@@ -33,7 +33,7 @@
     </p>
 </body>
 
-### Execução
+#### Execução
 <body style="text-align: justify">
     <p>
         Os arquivos de clase gerados, como falados anteriormente independem do tipo de Máquina (Hardware) ou mesmo do tipo de Sistema Operacional, o que torna Java uma linguagem muito versátil permitindo que um código escrito na linguagem seja executado em praticamente qualquer sistema. 
@@ -48,9 +48,9 @@
     </p>
 </body>
 
-## Nomes, variáveis e vinculação
+### Nomes, variáveis e vinculação
 
-### Nomes
+#### Nomes
 
 <body style="text-align: justify">
     <p>
@@ -73,7 +73,7 @@
     </p>
 </body>
 
-### Variáveis
+#### Variáveis
 
 <body style="text-align: justify">
     <p>
@@ -88,7 +88,7 @@
     </p>
 </body>
 
-### Vinculação (Binding)
+#### Vinculação (Binding)
 
 <body style="text-align: justify">
     <p>
@@ -103,9 +103,9 @@
     </p>
 </body>
 
-## Escopo, tempo de vida e ambientes de referência.
+### Escopo, tempo de vida e ambientes de referência.
 
-### Escopo e tempo de vida
+#### Escopo e tempo de vida
 
 <body style="text-align: justify">
     <p>
@@ -120,7 +120,7 @@
     </p>
 </body>
 
-### Ambientes de Referência
+#### Ambientes de Referência
 
 <body style="text-align: justify">
     <p>
@@ -128,7 +128,7 @@
     </p>
 </body>
 
-## Estruturas de controle a nível de Instrução
+### Estruturas de controle a nível de Instrução
 
 <body style="text-align: justify">
     <p>
