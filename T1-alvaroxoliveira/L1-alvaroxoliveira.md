@@ -42,7 +42,30 @@ _Colocar uma figura / árvore, com pais e filhos_.
 Java é uma linguagem multi-paradigma, ou seja, suporta muitos paradigmas. Dentre estes estão a Programação Orientada a objetos, Programação Funcional, Imperativo, Genérico, Reflexivo e concorrente.
 O paradigma principal e mais famoso para o desenvolvimento com Java é o paradigma de Programação Orientado a Objetos. Foi com ele que a linguagem ganhou adeptos e fez ser a linguagem tão famosa que é atualmente.
 
-### Proposito
+### Propósito
+
+O propósito da Linguagem é ser de escrita simples, de forma legível e com bastante produtividade. Durante os anos foi sendo usada em todos os ambientes de software por conta do seu princípio de escrever apenas uma vez o código e executá-lo em praticamente qualquer sistema, o que chamou atenção de vários programadores pelo mundo todo. 
+
+É uma linguagem que tem o foco na construção de softwares de médio a grande porte, em que um time normalmente tem várias pessoas e sempre pode crescer. Além disso, segue a Orientação a Objetos com o intuito de simular o mundo real como abstração para facilitar as resoluções dos problemas.
+
+### Sistema de tipos
+
+Sua tipagem ocorre por duas formas: por referência e por valor.
+
+A passagem por valor vêm dos tipos primitivos da linguagem. Estes são:
+
++ boolean;
++ byte;
++ char;
++ short;
++ int;
++ long;
++ float;
++ e double.
+
+Essas variáveis podem armazenar apenas um valor de seu tipo declarado por vez, assim, quando outro valor for atribuído a essa variável, seu valor iniciar será substituído.
+
+A tipagem por referência são classes que especificam os tipos de objeto. Podem ser dos tipos: String, Arrays Primitivos e Objetos.
 
   + Paradigma
   + Propósito
