@@ -45,7 +45,7 @@ Um exemplo muito forte para ver isso é o uso das keywords public e static a um 
         Declarações de tomada de decisão.
         <ul>
           <li>
-            Declarações do tipo <code>if/else if/else</code>.
+            Declarações do tipo <code>if/else if/else-if</code>.
           </li>
           <li>
             Declarações do tipo <code>switch/case</code>.
@@ -185,12 +185,41 @@ Os tipos primitivos são aqueles que normalmente vêm em todas as linguagens. Es
 
 Temos também os tipos complexos, ou tipos por referência, que são aqueles que através de variáveis de tipos por referência, armazenam as localizações de objetos na memória. Esses objetos referênciados podem ter várias variáveis de intância e métodos dentro do objeto apontado. Para conseguir acessá-los, é preciso ter uma referência a algum deles, e suas referências inicialmente são inicializadas como null.
 
-O Java fornece uma facilidade imensa para a criação de estruturas de dados complexas a partir das suas vinculações e composições de classes. Além disso fornece uma gama de estruturas já prontas para uso, facilitando bastante a vida do programador. Estas são:
+O Java fornece uma facilidade imensa para a criação de estruturas de dados complexas a partir das suas vinculações e composições de classes. Além disso fornece uma gama de estruturas já prontas para uso, facilitando bastante a vida do programador. Algumas delas são:
 
 - String que pode ser usado para "tipar" uma variável.
 - Collection que é um conjunto de interface e classes que funciona para representar e tratar um grupo de dados como uma única unidade. Com ele se pode usar coisas como um ArrayList que basicamente é um tipo de array para listar objetos ou até mesmo até outros arrays. Dentro desta ramificação temos ainda Set, Queue, Map, LinkedList, PriorityQueues e outros.
 
-##### Aspectos sintáricos
+##### Aspectos sintáticos
+
+Como já citado antes, Java tem uma sintaxe bem parecida com linguagens como C/C++ e linguagens que derivam das mesmas. A semelhança é muito forte e para quem já teve uma experiência com essas linguagens é muito tranquilo para aprender a estrutura e funcionamento do Java.
+
+Por exemplo, para declarar uma classe, basta apenas definir o modificador de visibilidade (public, private, default ou protected) que são importantes por conta do conceito de encapsulamento, a keyword class, o nome da classe e definir o bloco de código entre chaves. Antes de definir o bloco de código, ainda é possível declarar uma possível herança para alguma superclasse desejada (extends) e implementar interfaces (implements). Ex:
+
+public class NomeDaClasse extends SuperClasse implements InterfaceDesejada, UmaSegundaInterfaceDesejada {
+  // Código da classe
+}
+
+Um atributo é definido bem parecidamente. Basta adicionar o modificador, seu tipo e seu nome, com a opção de inicialização com um valor através do sinal de atribuição. Ex:
+
+**Importante citar que todas as instruções devem finalizar com um ponto e vírgula**
+
+public class NomeDaClasse {
+  // Atributos de uma classe
+  public int a;
+  public int a = 10;
+}
+
+Um método também é super parecido. Deve ter um modificador, o tipo retornado, seu nome e entre parênteses deve apresentar seus parâmetros, sendo estes separados por virgula, tendo seus tipos declarados seguidos do seu nome e posteriormente definido o seu bloco de código correspondente.
+
+public class NomeDaClasse {
+  // Método em uma classe
+  public float somaValor(float valor1, float valor2) {
+    // Código do método
+  }
+}
+
+
 
 Fatores:
 - Simplicidade
