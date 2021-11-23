@@ -30,7 +30,7 @@ Fontes:
 
 ## Apresentação e histórico
 
-![Contribution guidelines for this project](https://github.com/alvaroxoliveira/caracterizacao/blob/main/T1-alvaroxoliveira/Linguagens.drawio.png)
+![Contribution guidelines for this project](/../T1-alvaroxoliveira/Linguagens.drawio.png)
   
 Java é uma linguagem de programação que segue principalmente o paradigma de Orientação a Objetos, criada na década de 90, criada pela **Sun Microsystens**, em um projeto chamado **Green Project**, chefiado por **James Gosling**. Em 2008, a Sun é vendida e o Java passa a ser posse da **Oracle Corporation**.
 Surge como uma ferramenta que seguia a ideia de ser executada em todo e qualquer sistema possível, e para isso houve um árduo projeto para a criação dessa possibilidade, já que nesta época existia o problema de incompatibilidade envolvendo a execução de código em diferentes tipos de máquina por conta da arquitetura usada nos computadores, sistema operacional e vários outros problemas técnicos que faziam com que um mesmo código escrito em uma linguagem com compilação tradicional não funcionasse para todos os tipos de computadores da época. Então Java é criada usando o conceito de execução de código por uma Virtual Machine, a famosa JVM, que faz a compilação do seu código para um bytecode e após isso é gerado um código de máquina compatível com as propriedades da máquina em uso, o que faz com que um mesmo código escrito seja executado em Windows ou Linux por exemplo.
