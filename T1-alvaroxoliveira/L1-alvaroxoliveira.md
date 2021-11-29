@@ -97,7 +97,6 @@ A metaprogramação é a capacidade de criar programas que podem representar ou 
 
 No Java, existem recursos para isso e o mais famoso é a API Java Reflection, que disponibiliza recursos para reflexão sobre classes e objetos que estão sendo usados na JVM, além de permitir inspecionar e manipular classes, interfaces, atributos, métodos e outros recursos em tempo de execução. Além disso é importante citar que a metaprogramação em Java é bastante importante para a criação de frameworks e que garantiu sucesso de alguns, como por exemplo o Spring, que é bastante usado para a criação de aplicações web.
 
-  + Metaprogramação
   + Gerenciamento de Ciclo de Vida
   + Segurança 
   + Performance
