@@ -97,6 +97,21 @@ A metaprogramação é a capacidade de criar programas que podem representar ou 
 
 No Java, existem recursos para isso e o mais famoso é a API Java Reflection, que disponibiliza recursos para reflexão sobre classes e objetos que estão sendo usados na JVM, além de permitir inspecionar e manipular classes, interfaces, atributos, métodos e outros recursos em tempo de execução. Além disso é importante citar que a metaprogramação em Java é bastante importante para a criação de frameworks e que garantiu sucesso de alguns, como por exemplo o Spring, que é bastante usado para a criação de aplicações web.
 
+
+### Gerenciamento de Ciclo de vida
+
+Em Java o gerenciamento de Ciclo de Vida de Objetos para gerenciar dados de serviços pode reduzir consideravelmente os custos de armazenamento e o tempo que se passaria gerenciando dados manualmente. Este funciona realizando uma ação automatizada com base nas regras que o programador define.
+
+Antes de um objeto ser criado, a classe Java que é responsável pelo instanciamento deste objeto deve ser carregada. Para isso, o Java em Tempo de Execução localiza essa classe e carrega-a em memória. Assim, quando é instanciado algum objeto ou acessado algum método da classe pela primeira vez, esta é carregada na memória também pela primeira vez.
+
+Os objetos são criados a partir da keyword new que chama o construtor da classe do objeto especificado, criando uma referência para o mesmo. O construtor serve apenas para este propósito inclusive, que é criar um objeto e apontar para a variável de referência. Após o objeto ser inicializado e carregado no programa, este pode ter acesso e proporcionar o uso dos seus métodos públicos por outras classes, realizando seu propósito.
+
+Quando não se utiliza-os mais, o próprio Java, mais precisamente, a JVM, se encarrega de maneira automática de removê-lo da memória, a partir do "garbage collection" ou coletor de lixo, "destruindo" os objetos que estão em desuso.
+
+### Segurança
+
+
+
   + Gerenciamento de Ciclo de Vida
   + Segurança 
   + Performance
