@@ -25,7 +25,7 @@ Fontes:
   * [Capacidades da Linguagem](#capacidades-da-linguagem)
   * [Produtividade do Desenvolvedor](#produtividade-do-desenvolvedor)
   * [Ecossistema](#ecossistema)
-  * [Informações Adicionais](#informa--es-adicionais)
+  * [Informações Adicionais](#informações-adicionais)
   * [Referências](#referências)
 
 ## Apresentação e histórico
@@ -83,15 +83,20 @@ Uma das funções mais importantes e de mais destaques da JVM está no gerenciam
 
 Já pra rede, como se necessitam de informações vindas de drivers de baixo nível vindo do Sistema Operacional, o Java, por ser de mais alto nível não tem accesso a tantas informações de rede, pois não é tão seguro o cenário contrário. As duas informações que estariam disponíveis e que realmente importam, são o hostname local e o endereço ip.
 
-  + Paradigma
-  + Propósito
-  + Sistema de Tipagem
-  + Ambiente de Execução
-  + Implementação
-  + Custos 
- _Custos aqui ..._
+### Custos
+
+Falando sobre custos, um software normalmente não tem um parâmetro comum para ser custeado. Tudo vai depender de como vai ser implementado, quantidade de programadores envolvidos no processo de criação, custos com infraestrutura, além do tempo que é o recurso mais precioso no desenvolvimento. Por isso é muito complicado definir um custo para desenvolver um software em Java ou em qualquer outra linguagem.
+
+Mas para o uso da linguagem diretamente, não se paga nada, pois a linguagem é de uso liberado e gratuito, distribuido para qualquer pessoa ou empresa que deseja usar a linguagem para construir seus projetos. 
 
 ## Capacidades da Linguagem
+
+### Metaprogramação
+
+A metaprogramação é a capacidade de criar programas que podem representar ou manipular outros programas ou o próprio programa que está sendo executado, assim como o uso de seus dados. 
+
+No Java, existem recursos para isso e o mais famoso é a API Java Reflection, que disponibiliza recursos para reflexão sobre classes e objetos que estão sendo usados na JVM, além de permitir inspecionar e manipular classes, interfaces, atributos, métodos e outros recursos em tempo de execução. Além disso é importante citar que a metaprogramação em Java é bastante importante para a criação de frameworks e que garantiu sucesso de alguns, como por exemplo o Spring, que é bastante usado para a criação de aplicações web.
+
   + Metaprogramação
   + Gerenciamento de Ciclo de Vida
   + Segurança 
