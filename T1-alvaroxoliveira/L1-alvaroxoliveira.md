@@ -46,11 +46,11 @@ O paradigma principal e mais famoso para o desenvolvimento com Java é o paradig
 
 ### Propósito
 
-O propósito da Linguagem é ser de escrita simples, de forma legível e com bastante produtividade. Durante os anos foi sendo usada em todos os ambientes de software por conta do seu princípio de escrever apenas uma vez o código e executá-lo em praticamente qualquer sistema, o que chamou atenção de vários programadores pelo mundo todo. 
+O propósito da Linguagem é ser de escrita simples, de forma legível e com bastante produtividade, seguindo a Orientação a Objetos como principal paradigma de desenvolvimento de software. Durante os anos foi sendo usada em todos os ambientes de software por conta do seu princípio de escrever apenas uma vez o código e executá-lo em praticamente qualquer sistema, o que chamou atenção de vários programadores pelo mundo todo. 
 
 É uma linguagem que tem o foco na construção de softwares de médio a grande porte, em que um time normalmente tem várias pessoas e sempre pode crescer. Além disso, segue a Orientação a Objetos com o intuito de simular o mundo real como abstração para facilitar as resoluções dos problemas.
 
-### Sistema de tipos
+### Sistema de tipagem
 
 Sua tipagem ocorre por duas formas: por referência e por valor.
 
@@ -67,7 +67,21 @@ A passagem por valor vêm dos tipos primitivos da linguagem. Estes são:
 
 Essas variáveis podem armazenar apenas um valor de seu tipo declarado por vez, assim, quando outro valor for atribuído a essa variável, seu valor iniciar será substituído.
 
-A tipagem por referência são classes que especificam os tipos de objeto. Podem ser dos tipos: String, Arrays Primitivos e Objetos.
+A tipagem por referência é usada por classes que especificam os tipos de objeto. Podem ser dos tipos: String, Arrays Primitivos e Objetos. Esses Objetos que são referenciados podem ter várias variáveis de instância e métodos dentro desses objetos apontados.
+
+Para ter acesso a um objeto e seus métodos, é preciso ter uma referência do mesmo, dada convencionalmente por uma variável de instância. Todas essas variáveis de referência são inicializadas com o valor nulo "null" que também é uma keyword do Java.
+
+### Ambiente de execução
+
+É importante saber sobre os ambientes de execução das linguagens de programação com o objetivo de resolver alguns problemas que podem ser rotineiros e também, além de tudo, se a linguagem consegue entregar aquilo que se deseja a um projeto que está se iniciando. Nesta parte que estarão definidas as informações sobre o sistema, controle de memória, rede, etc.
+
+No Java, as informações sobre os recursos de Hardware são bem limitadas, pois a linguagem usa como seu alicerce para o funcionamento dos recursos da linguagem a JVM, além de ser uma linguagem de alto nível e multiplataforma, o que dificulta o acesso às bibliotecas do sistema operacional. Apesar de tudo isso, alguns elementos importantes estão disponíveis para serem acessados na sua API, como as propriedades e algumas informações sobre o sistema, controle de memória e também informações de rede.
+
+As propriedades de sistema são pares de nome/valor que fornecem informações sobre o ambiente de execução e dsponibilizam informações diretas do sistema, as quais dizem sobre o Sistema Operacional da máquina, nome de usuário, caminho para as classes de carregamento da linguagem, versão da JVM, etc. Outras informações do sistema também são importantes e entre elas se destacam as informações específicas de operação do sistema e entre estas pode ser conferido se algum gerenciador de segurança está instalado, qual ```class loader``` foi utilizado para carregar a classe, quantas CPUs estão disponíveis, entre outras informações.
+
+Uma das funções mais importantes e de mais destaques da JVM está no gerenciamento de memória. Em linguagens como C/C++ o controle de alocação e desalocação de memória é feito de forma manual pelo próprio programador, o que pode ser uma vantagem por conta da flexibilidade que existe nesse processo, mas em muitos outros cenários, se tornou um problema muito grande, pois não é um trabalho tão "trivial" até para programador experientes, e memória que é alocada e não é desalocada é um problema sério que pode complicar bastante um software. Por conta disso, na criação do Java e da sua JVM, foram criadas maneiras de gerenciar esse processo automaticamente, o que tirou essa flexibilidade, porém se ganhar uma produtividade ordens de grandeza maior pelo fato de não se preocupar mais com tantos detalhes sobre alocação/desalocação de memória. Uma das formas, a qual é mais conhecida, é o "garbage collection" ou coletor de lixo, que acontece quando a aplicação está precisando e solicitando de mais memória, então a JVM faz a verificação se pode atender usando a memória livre já alocada no processo, e caso não tenha essa possibilidade, a JVM realiza uma coleta de lixo, liberando memória utilizada por objetos referenciados como "null". Para fazer o monitoramento e gerenciamento da memória, afim de obter melhores desempenhos das aplicações Java, é interessante estar de olho no uso de memória da aplicação, o que pode ser feito via profiler, como o JProbe ou o OptimizeIt.
+
+Já pra rede, como se necessitam de informações vindas de drivers de baixo nível vindo do Sistema Operacional, o Java, por ser de mais alto nível não tem accesso a tantas informações de rede, pois não é tão seguro o cenário contrário. As duas informações que estariam disponíveis e que realmente importam, são o hostname local e o endereço ip.
 
   + Paradigma
   + Propósito
