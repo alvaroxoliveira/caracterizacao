@@ -110,10 +110,30 @@ Quando não se utiliza-os mais, o próprio Java, mais precisamente, a JVM, se en
 
 ### Segurança
 
+A segurança na linguagem de programação é uma das ênfases dp JDK. No próprio coração da linguagem Java, há um grande suporte de segurança para tipos, além do já citado coletor de lixo automático, que aumenta a robustez do código da aplicação. Outra coisa muito importante a ser citada é a existência de um mecanismo de verificação e carregamento de classes que garante que apenas o código legítimo é executado pela aplicação. Sua arquitetura ainda dispões de APIs, implementações de algoritmos, mecaniosmos e protocolos de segurança comumente usados.
+
+As APIs de segurança são bastante gerais e cobrem uma ampla variedade de casos de uso para várias áreas, além de possuir interfaces de criptografia e de infraestrutura de chave pública que fornecem base para o desenvolvimento de aplicativos seguros. Isso faz com que haja um controle de acesso para a proteção contra acessos que não sejam autorizados.
+
+Alguns dos processos de segurança ocorrem durante a compilação. Todo o bytecode é varrido e há uma verificação da JVM para verificar se esses códigos são legítimos para serem executados no Java Runtime. Assim é verificada a confirmidade do bytecode com as especificações da linguagem, para que não se viole coisas como regras da linguagem ou restrições de namespace. O verificador ainda varre o programa contra violações de gerenciamento de memória, estouro ou insuficiênte de pilha e previsões de tipos de dados ilegais. Depois que o bytecode é verificado, este passa para ser executado pelo runtime.
+
+Além disso o Java permite o controle de acesso a atributos e métodos de classes através de seus modificadores de acesso que podem ser:
+
++ private: Acesso restrito à própria classe.
++ protected: Acesso restrito ao mesmo pacote.
++ padrão: Quando não é marcado explicitamente. Este só pode ser acessado ou definido dentro do mesmo pacote.
++ public: É o menos restritivo, todas as classes da aplicação tem visibilidade quando este é especificado.
 
 
-  + Gerenciamento de Ciclo de Vida
-  + Segurança 
+Em termos de arquitetura, o JDK defiine um conjunto de APIs que abrangem as principais áreas de segurança, permitindo que os desenvolvedores integrem facilmente a seguraça do código em desenvolvimento. Essas APIs são projetadas em torno de três principios bastante importantes:
+
++ Independência de implementação: Neste, quer dizer que os aplicativos não precisam implementar a segurança por eles próprios e sim solicitar os serviços de segurança do próprio JDK.
++ Interoperabilidade de implementação: Quer dizer que um aplicativo não está ligado diretamente a um provedor específico se este não depender dos valores padrão do provedor.
++ Extensibilidade do algoritmo: O JDK inclui provedores integrado, permitindo que um conjunto básico de serviços de segurança sejam usados. Além disso o JDK suporta que outros provedores sejam instalados para que implementem outros serviços afim de customizações quando for preciso.
+
+### Performance
+
+
+
   + Performance
   + Escalabilidade
   + Confiabilidade
