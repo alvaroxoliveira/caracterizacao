@@ -30,7 +30,7 @@ Fontes:
 
 ## Apresentação e histórico
 
-![Contribution guidelines for this project](T1-alvaroxoliveira/Linguagens.drawio.png)
+![Histórico da linguagem java](https://github.com/alvaroxoliveira/caracterizacao/blob/main/T1-alvaroxoliveira/Java-LP.png)
   
 Java é uma linguagem de programação que segue principalmente o paradigma de Orientação a Objetos, criada na década de 90, criada pela **Sun Microsystens**, em um projeto chamado **Green Project**, chefiado por **James Gosling**. Em 2008, a Sun é vendida e o Java passa a ser posse da **Oracle Corporation**.
 Surge como uma ferramenta que seguia a ideia de ser executada em todo e qualquer sistema possível, e para isso houve um árduo projeto para a criação dessa possibilidade, já que nesta época existia o problema de incompatibilidade envolvendo a execução de código em diferentes tipos de máquina por conta da arquitetura usada nos computadores, sistema operacional e vários outros problemas técnicos que faziam com que um mesmo código escrito em uma linguagem com compilação tradicional não funcionasse para todos os tipos de computadores da época. Então Java é criada usando o conceito de execução de código por uma Virtual Machine, a famosa JVM, que faz a compilação do seu código para um bytecode e após isso é gerado um código de máquina compatível com as propriedades da máquina em uso, o que faz com que um mesmo código escrito seja executado em Windows ou Linux por exemplo.
@@ -423,19 +423,54 @@ O Java fornece uma facilidade imensa para a criação de estruturas de dados com
 - Collection que é um conjunto de interface e classes que funciona para representar e tratar um grupo de dados como uma única unidade. Com ele se pode usar coisas como um ArrayList que basicamente é um tipo de array para listar objetos ou até mesmo até outros arrays. Dentro desta ramificação temos ainda Set, Queue, Map, LinkedList, PriorityQueues e outros.
 
 ## Ecossistema
-  + Maturidade
-  + Comunidade
-  + Governança
-  + Fragmentação
 
----
+### Maturidade
+
+Como ja falado, é uma linguagem bastante antiga e que possui uma maturidade excelente, que ao longo dos anos foi sendo sempre atualizada afim de corrigir erros e também não ficar para trás perante às linguagens que foram surgindo.
+
+### Comunidade
+
+Como o tópico anterior, podemos brevemente falar que com todas as qualidades que Java mostrou durante o tempo, foi adotada por milhões de desenvolvedores o que por consequência formou uma comunidade muito grande e uma quantidade incrível de materiais de aprendizagem que estão disponibilizados pela internet, além de fóruns, github, etc. Além disso é uma linguagem que é bastante empregada na academia.
+
+### Governança
+
+Java é uma linguagem que atualmente é mantida pela Oracle Corporation, atualmente na versão 17 (estável).
 
 ## Informações Adicionais
-
-
 ## Referências 
 
-1. https://www.gartner.com/en/documents/2071615/programming-languages 
-framework for assessing and characterizing programming languages and assessing their applicability to specific projects
-
-
+1. https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
+2. https://www.learningjournal.guru/article/programming-in-java/scope-and-lifetime-of-a-variable/
+3. https://www.geeksforgeeks.org/compilation-execution-java-program/
+4. https://www.javatpoint.com/static-binding-and-dynamic-binding
+5. https://elixir-lang.readthedocs.io/en/latest/technical/scoping.html
+6. https://www.javatpoint.com/control-flow-in-java
+7.  https://computerworld.com.br/plataformas/java-completa-20-anos-e-conquista-adeptos-pela-simplicidade/
+8.  https://www.daniweb.com/programming/software-development/threads/301991/orthogonality-in-java
+9.  https://www.alura.com.br/conteudo/estrutura-de-dados
+10. https://www.researchgate.net/publication/220378102_The_Java_5_Generics_Compromise_Orthogonality_to_Keep_Compatibility
+11. https://www.devmedia.com.br/java-collections-como-utilizar-collections/18450
+12. https://docs.oracle.com/javase/9/security/java-security-overview1.htm#JSSEC-GUID-2EF91196-D468-4D0F-8FDC-DA2BEA165D10
+13. https://www.infoq.com/br/news/2009/05/8-Best-Practices-Scalability/
+14. https://www.dynatrace.com/resources/ebooks/javabook/performance-and-scalability/
+15. http://highscalability.com/
+16. https://www.techopedia.com/2/28705/development/programming-languages/why-is-java-preferred-to-other-languages-in-building-technological-blocks#:~:text=Unlike%20them%2C%20Java%20is%20not,with%20other%20frameworks%20and%20technologies.
+17. https://www.vogella.com/tutorials/JavaConcurrency/article.html
+18. http://tutorials.jenkov.com/java-concurrency/index.html
+19. http://tutorials.jenkov.com/java-concurrency/index.html#what-is-multithreading
+20. https://www.redhat.com/pt-br/topics/cloud-native-apps/what-is-a-Java-framework
+24. https://www.redhat.com/pt-br/topics/cloud-native-apps/what-is-quarkus
+25. https://www.codigofonte.com.br/artigos/os-dez-melhores-frameworks-java-do-mercado
+26. https://www.devmedia.com.br/introducao-a-servlets-em-java/25285
+27. https://www.devmedia.com.br/conheca-o-apache-tomcat/4546
+28. https://www.guj.com.br/t/o-que-e-ciclo-de-vida/46122
+29. https://faqcartx.info/programa%C3%A7%C3%A3o/41126-qual-%C3%A9-o-ciclo-de-vida-de-um-objeto-em-java.html
+30. https://javaee.github.io/tutorial/overview005.html
+31. http://www.dsc.ufcg.edu.br/~jacques/cursos/j2ee/html/servlets/intro.htm
+32. https://www.guj.com.br/t/diferenca-entre-jboss-e-tomcat/88525
+33. https://medium.com/@michellibrito/entendendo-o-que-%C3%A9-um-servidor-de-aplica%C3%A7%C3%A3o-e-um-servlet-container-na-programa%C3%A7%C3%A3o-java-para-web-d2146a4958ea
+34. https://www.devmedia.com.br/principais-ferramentas-de-apoio-ao-desenvolvimento-java/34126
+35. https://4linux.com.br/o-que-e-jboss/
+36. https://www.devmedia.com.br/jboss-instalacao-arquitetura-configuracao-tuning-e-administracao/10118
+37. https://www.jetbrains.com/pt-br/idea/
+38. https://netbeans.apache.org/download/index.html
