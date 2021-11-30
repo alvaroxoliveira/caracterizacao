@@ -132,11 +132,27 @@ Em termos de arquitetura, o JDK defiine um conjunto de APIs que abrangem as prin
 
 ### Performance
 
+Performance é um dos pontos considerados importantes ao se desenvolver uma aplicação. È bastante relevante pois nenhuma pessoa ou empresa quer desenvolver um software que não seja rápido, pois isso gera um impacto negativo muito forte para a experiência do usuário.
+
+Java históricamente é uma linguagem de desenvolvimento de aplicações que são executadas via Máquina Virtual e não diretamente no processador, como ocorre com C/C++, e por isso as aplicações em Java sempre foram um pouco mais lentas se comparados à essas linguagens. Isso foi uma preocupação muito forte nos anos 90, mas que foi melhorando muito conforme a linguagem foi evoluindo e sendo adotada por uma gama de sistemas, como pode ser visto hoje.
+
+Alguns recursos que ajudaram fortemente a melhoria dos fatores que se referem à desempenho e performance foi a adoção da compilação JIT (Just-in-Time) adotada pela Sun no em 1997, na versão 1.1. Outras coisas como a   adição de alguns recursos na linguagem como por exemplo o suporte á uma melhor análise de código e otimizações na JVM, a execução de bytecode em hardware também foram exploradas com o objetivo de melhoramento do desempenho.
+
+### Escalabilidade
+
+Escalabilidade tem a ver com a crescente do uso de um software, ou seja, do aumento de usuários e da frequência que passam a utilizar a aplicação. Geralmente pode ser feita aumentando o poder de processamento do hardware, adicionando mais recursos aos servidores, como mais RAM, Processadores com mais núcleos, disco, etc. que são úteis em certas ocasiões, mas não necessariamente pode ser barato, e também tem a forma de escalonamento via aumento de máquinas, ou horizontal, que são instância/nós de servidores adicionais, que também são chamados de clusters que trabalham juntos, normalmente feitos em ambientes baseados em nuvem, que geram efeitos positivos como barateamento de custos.
+
+Normalmente Java tem suporte muito bom quanto às adaptações à esses dois tipos de infraestrutura, fornecendo suporte de armazenamento de componentes Java EE como EJBs. Não necessariamente a alta escalabilidade pode ser util ou mesmo um requisito para todos os aplicativos Java, mas é util levar em consideração na construção de um projeto, se este for designado para o público em geral, pois nunca se sabe o quanto de sucesso se obterá para uma dada solução.
+
+Além disso ainda é importante falar que não necessariamente a escalabilidade vai resolver problemas de desempenho que venham ocorrer, e adicionando hardware de maneira infinita, chega um momento que isso se tornará caro e até pior, não irá funcionar, então por isso é sempre importante que haja um planejamento muito minuncioso e maneiras de otimizar o código e seu funcionamento, promovendo segurança nas setializações de dados e sincronizações, utilizando sempre código o mais otimizado e claro possível, mantendo o código sempre legível para manutenibilidade, sempre mantendo o equilíbrio. 
+
+### Confiabilidade
+
+Depois dos tópicos anteriores, é praticamente inegável que Java possui uma confiabilidade incrível, afinal é uma linguagem que alcançou um sucesso muito grande e depois de 30 anos, continua sendo uma linguagem muito utilizada ainda, estando atualmente na versão 17.
+
+É certamente uma linguagem robusta, o que garante confiabilidade, oferecendo o tratamento de exceções que pode resistir aos problemas e condições de erro que venham ocorrer e tudo isso sem interromper o funcionamento da aplicação. Além dessa parte, é uma linguagem que permite a escrita de um código com segurança, portabilidade, com suporte a multithreading e muito mais.
 
 
-  + Performance
-  + Escalabilidade
-  + Confiabilidade
   + Concorrência e Threading 
   + Custos
   _Custos aqui ... _
