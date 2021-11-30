@@ -152,18 +152,275 @@ Depois dos tópicos anteriores, é praticamente inegável que Java possui uma co
 
 É certamente uma linguagem robusta, o que garante confiabilidade, oferecendo o tratamento de exceções que pode resistir aos problemas e condições de erro que venham ocorrer e tudo isso sem interromper o funcionamento da aplicação. Além dessa parte, é uma linguagem que permite a escrita de um código com segurança, portabilidade, com suporte a multithreading e muito mais.
 
+### Concorrência e Threading 
 
-  + Concorrência e Threading 
-  + Custos
-  _Custos aqui ... _
+A linguagem tem suporte a multithreading e foi projetada para a programação simultânea, que envolve o uso de multiplos canais do processador, promovendo melhores desempenhos para a aplicação. Contudo isso pode não ser seguro se não for feito de forma responsável, pois requer sincronização dessas instâncias, afinal elas estão gravando dados na mesma memória de maneira simultânea. A linguagem Java possui vários recursos para que haja possibilidade de programar com concorrência.
 
 ## Produtividade do Desenvolvedor
-  + Frameworks e Contâiners
-  + Ferramentas Disponíveis
-  + Sintaxe, Semântica e Operações Predefinidas
-    + Legibilidade
-    + Redigibilidade
-  + Custos 
+
+Java é uma linguagem que permite uma grande produtividade ao desenvolvedor. Depois de anos várias ferramentas, frameworks e vários outros recursos foram produzidos afim de aumentar a quantidade de desenvolvimento de aplicações em Java e isso foi bastante importante para a sua difusão, e além disso a linguagem ainda apresenta bons recursos que fazem com que isso se solifique ainda mais.
+### Frameworks e Contâiners
+
+Frameworks são agrupamentos de código organizados com o objetivo de entregar um esqueleto de uma aplicação para que um desenvolvedor não comece de um absoluto zero, entregando várias ferramentas conjuntas que façam com que a produtividade de uma aplicação cresça exponencialmente tornando muito mais rentável e mais rápido o desenvolvimento.
+
+Frameworks em Java são incontáveis e muito usados para o desenvolvimento. Podemos citar:
+
++ Spring boot: É um ótimo framework que é muito utilizado para desenvolvimento de aplicações web, sendo o recordista de uso pelos desenvolvedores nos últimos anos.
++ Play: É uma alternativa para o desenvolvimento web, que permite a criação de aplições web modernas com foco em mobile a partir de uma arquitetura stateless.
++ Struts: Solução para aplicações web seguindo o padrão MVC, robusta e de código aberto.
++ Google Web Toolkit: Como o próprio nome sugere, é um framework criado pelo Google de integração de código Java ao lado do cliente com JavaScript, empregrando APIs do google.
++ Quarkus: É um framework que entrega uma facilidade muito grande de criação de APIs RestFull, compatível com infraestruturas nativas baseadas em nuvem, além de ser stack full.
++ Hibernate: Uma solução bastante conhecida, pois é um dos principais frameworks usados para a integração entre o Java e os Sistemas Gerenciadores de Bancos de Dados. Inclusive, vários frameworks incluem o Hibernate dentro deles com o intuito de facilitar o uso de bancos de dados nas aplicações.
+
+O container mais utilizado em Java é o Apache Tomcat com JSP (Java Server Pages). Esse software foi desenvolvido pela Apache e permite a execução de aplicações web usando a linguagem Java.
+
+### Ferramentas Disponíveis
+
+Ferramentas que são importantes de serem citadas são suas IDEs que promovem produtividade para o desenvolvedor, sendo um ambiente que possui a maioria das ferramentas para uma melhor comodidade do desenvolvedor.
+
+Dentre várias podemos citar:
+
++ Eclipse: Com certeza é a mais usada e famosa quando se fala em Java. Tem diversos recursos, além de ser de uso gratuito e relativamente fácil.
++ Intellij IDEA: IDE criada pela Jet Brains, é uma ótima opção para o uso profissional, oferecendo o melhor da tecnologia Jet Brains. Sua versão completa é paga, porém existe a versão Community que é totalmente gratuita.
++ Netbeans: É um IDE também bastante conhecida para desenvolvimento Java, sendo também gratuita, criado pela Apache.
+
+Temos ferramentas para a criação de testes unitários, muito importantes para o desenvolvimento de software, dentre o qual o JUnit é o mais conhecido e mais utilizado. 
+
+Outra ferramenta que também é bastante utilizada é o MAVEN, que é utilizada para automatizar a compilação de projetos Java. 
+
+JBoss que é um servidor de aplicação de código aberto, uma ferramenta bastante incrível que faz aquilo que um servidor real deveria fazer, mas sem se preocupar com a maioria das coisas que em um cenário de produção viria a acontecer, entregando mais produtividade.
+
+###  Sintaxe, Semântica e Operações Predefinidas
+
+Como já citado antes, Java tem uma sintaxe bem parecida com linguagens como C/C++ e linguagens que derivam das mesmas. A semelhança é muito forte e para quem já teve uma experiência com essas linguagens é muito tranquilo para aprender a estrutura e funcionamento do Java.
+
+Por exemplo, para declarar uma classe, basta apenas definir o modificador de visibilidade (public, private, default ou protected) que são importantes por conta do conceito de encapsulamento, a keyword class, o nome da classe e definir o bloco de código entre chaves. Antes de definir o bloco de código, ainda é possível declarar uma possível herança para alguma superclasse desejada (extends) e implementar interfaces (implements). Ex:
+
+```
+public class NomeDaClasse extends SuperClasse implements InterfaceDesejada, UmaSegundaInterfaceDesejada {
+  // Código da classe
+}
+```
+
+Um atributo é definido bem parecidamente. Basta adicionar o modificador, seu tipo e seu nome, com a opção de inicialização com um valor através do sinal de atribuição. Ex:
+
+**Importante citar que todas as instruções devem finalizar com um ponto e vírgula**
+
+```
+public class NomeDaClasse {
+  // Atributos de uma classe
+  public int a;
+  public int a = 10;
+}
+```
+
+Um método também é super parecido. Deve ter um modificador, o tipo retornado, seu nome e entre parênteses deve apresentar seus parâmetros, sendo estes separados por virgula, tendo seus tipos declarados seguidos do seu nome e posteriormente definido o seu bloco de código correspondente.
+
+```
+public class NomeDaClasse {
+  // Método em uma classe
+  public float somaValor(float valor1, float valor2) {
+    // Código do método
+  }
+}
+```
+
+Para instanciar uma classe e criar um objeto, temos que declarar o tipo da classe que queremos instanciar, seguido do nome da variável, uma atribuição seguido do operador **new** chamando o construtor da classe que é o nome da classe seguido de parênteses com os valores dos atributos desejados e compatíveis com aquele construtor.
+
+Se temos uma classe produto que contem dois atributos, nome e preco, podemos ter um construtor envolvendo esses dois atributos, por exemplo:
+
+```
+public class Produto {
+  public String nome;
+  public float preco;
+
+  public Produto(String nome, float preco) {
+    this.nome = nome;
+    this.preco = preco;
+  }
+}
+```
+
+Assim podemos instanciar um objeto desta forma:
+
+```
+public class Main {
+    public static void main(String[] args) throws IOException {
+        Produto produto1 = new Produto("Produto 1", "")
+    }
+}
+```
+
+Falando em objetos e classes, temos por convenção que cada classe fiquem em arquivos separados, assim temos que entender o conceito de pacotes e importações do Java. O conceito de pacote **package** está em dizer onde uma determinada classe está localizada, e o conceito de **imports** também quer dizer a mesma coisa, mas a diferença é que o último serve para localizar classes externas, sendo declarados nas primeiras linhas do arquivo. Assim, poderíamos ter algo da seguinte forma:
+
+```
+package src.Main;
+import src.Produto;
+public class Main {
+    public static void main(String[] args) throws IOException {
+        Produto produto1 = new Produto("Produto 1", "")
+    }
+}
+```
+
+#### Estruturas de controle
+
+<body style="text-align: justify">
+    <p>
+      O compilador Java executa o código de cima para baixo. As instruções no código são executadas de acordo com a ordem em que aparecem. No entanto, o Java fornece instruções que podem ser usadas para fazer o controle o fluxo em códigos escritos na linguagem. Essas são chamadas de instruções de fluxo de controle. É um dos recursos fundamentais do Java e também de outras linguagens de programação, que fornece um bom fluxo de programa.
+    </p>
+    <p>
+      O java Fornece três tipos de instruções de fluxo de controle, as quais são:
+    </p>
+    <ol>
+      <li>
+        Declarações de tomada de decisão.
+        <ul>
+          <li>
+            Declarações do tipo <code>if/else if/else-if</code>.
+          </li>
+          <li>
+            Declarações do tipo <code>switch/case</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        Instruções de repetição:
+        <ul>
+          <li>
+            Repetições do tipo <code>for</code>. 
+          </li>
+          <li>
+            Repetições do tipo <code>for-each</code>. 
+          </li>
+          <li>
+            Repetições do tipo <code>while</code>. 
+          </li>
+          <li>
+            Repetições do tipo <code>do-while</code>. 
+          </li>
+        </ul>
+      </li>
+      <li>
+        Declarações de salto (jump).
+        <ul>
+          <li>
+            Declarações do tipo <code>break</code>;
+          </li>
+          <li>
+            Declarações do tipo <code>continue</code>.
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <p>
+      Em Java uma instrução do tipo if é chamada de condicional, ou seja, seu uso é para avaliar expressões lógicas. Essa expressão lógica retorna verdadeiro ou falso e com isso há o desvio de fluxo dependendo do resultado da expressão. Existem quatro tipos dessas expressões:
+      <ol>
+        <li>
+          Declaração <code>if</code> simples, na qual o <code>if</code> recebe uma expressão entre parenteses e caso a expressão seja verdadeira ele executa um bloco de código que é declarado logo após os parênteses.
+        </li>
+        <li>
+          Declaração <code>if/else</code>, na qual existe um <code>else</code> logo após o <code>if</code> que executará um bloco de código caso a expressão que o <code>if</code> testou seja falsa.
+        </li>
+        <li>
+          Declaração <code>if/else-if</code>, na qual existem várias condições aninhadas, as quais existe primeiramente um <code>if</code> e logo após condições <code>else if</code> também recebendo outras expressões entre parênteses e executando blocos de código para cada uma dessas outras expressões booleanas e podendo serem terminadas com <code>else</code> caso todas as outras expressões anteriores forem falsas.
+        </li>
+        <li>
+          Declaração <code>if</code> aninhada é basicamente um conjunto de expressões <code>if</code>, na qual existe um <code>if</code> que contem dentro do seu bloco de código outros <code>if</code> ou <code>if-else</code> aninhados.
+        </li>
+      </ol>
+    </p>
+    <p>
+      Em Java as instruções do tipo switch são super parecidas com às instruções do tipo if-else-if. Essas instruções contém vários blocos de código chamados cases, e um único case é executado com base na variável que está sendo alternada. A instrução switch tem uma certa vantagem em ser usada ao invés dos if's aninhados por conta da legibilidade que entrega.
+    </p>
+    <p>
+      Pontos que devem ser levados em consideração ao usar switch:
+    </p>
+    <ul>
+      <li>
+        As condições de case podem ser de tipos primitivos ou enumaration e também, a partir do Java 7 podem ser usadas as Strings.
+      </li>
+      <li>
+        Cases não podem ser duplicados.
+      </li>
+      <li>
+        A instrução default é chamada quando nenhum dos casos corresponde à condição, semelhanto ao else e também é opcional.
+      </li>
+      <li>
+        A instrução break finaliza um bloco de código quando a condição é satisfeita. Também é opcional e o próximo caso é executado.
+      </li>
+      <li>
+        Obviamente ao usar esse tipo de estrutura, a condição case deve ser do mesmo tipo que a váriável usada na expressão switch.
+      </li>
+    </ul>
+    <p>
+      Falando agora sobre loop, no Java precisamos também considerar casos onde precisamos executar certos blocos de código mais de uma vez, então usamos estruturas de controle que chamamos de estruturas de repetição. Para executar esses loops, precisamos também de certas condições, para que haja uma entrada nessas repetições e também para que haja uma parada, pois um loop infinito nunca é um caso desejado para os programadores.
+    </p>
+    <p>
+      Em java temos três tipos de loops que são executados de forma bastante semelhante, apesar da sintaxe de cada um se diferenciar um do outro. Essas formas são:
+    </p>
+    <ul>
+      <li>
+        O loop for.
+      </li>
+      <li>
+        O loop for-each.
+      </li>
+      <li>
+        O loop while.
+      </li>
+      <li>
+        O loop do-while.
+      </li>
+    </ul>
+    <p>
+      O loop for é utilizado quando se há um loop controlado de certa forma que conhecemos o ponto de entrada no loop e o ponto de parada, ou seja, conhecemos quando vamos entrar e quando vamos sair do código. Este loop tem a sintaxe do tipo:
+      <code>for(condicaoDeInicio; condicaoDeParada; controleIncrementoOuDecremento) {// bloco de código associado.}</code>
+    </p>
+    <p>
+      O loop for-each é utilizado quando se deeja um loop iterável para atravessar estruturas de dados mais complexas como arrays ou collections. Neste tipo de loop não há necessidade de haver uma variável iteirável para ser um contador de loop para ser atualizada. O for-each então chega na estrura e executa seu bloco de código para cada um dos elementos dessas estruturas e fornece com isso uma segurança de que não irá dar erro por conta de alguma variável tentando ser acessada mas que na verdade não existe.
+      <code>for(TipoDaEsrutura elemento: nomeDaEsrutura){// bloco de código associado.}</code>
+    </p>
+    <p>
+      No loop While, as instruções são repetidas várias vezes, sem haver um controle tão rigoroso com nos loops anteriores. Esses loops são ideais quando não se sabe exatamente quantas iterações deverão ter para satisfazer as condições. Este loop ele carrega também uma expressão booleana que quando não satisfeita o loop para. Então também caso não seja tão rigorosamente controlado poderá gerar erros. A sintaxe é a seguinte:
+      <code>while(condicao){// bloco de código associado.}</code>
+    </p>
+    <p>
+      No loop do-While, é semelhante filosoficamente com o anterior, porem o bloco de código é executado pelo menos uma vez para depois verificar a condição. Ou seja, é para ser executado quando a quantidade de execuções não é definida e precisamos executar o bloco de código pelo menos uma vez. A sintaxe é a seguinte:
+      <code>do{// bloco de código associado.} while(condicao);</code>
+    </p>
+    <p>
+      Por fim, temos as declarações de Jump (saltos) que são usadas para transferir controle do programa para instruções específicas. Essas instruções basicamente transferem o controle e fluxo para outras partes do programa e existem duas delas bem conhecidas na linguagem Java que são:
+    </p>
+    <ul>
+      <li>
+        O salto break.
+      </li>
+      <li>
+        O salto continue.
+      </li>
+    </ul>
+    <p>
+      O break basicamente serve para parar a execução de um fluxo atual e transferir o controle para uma próxima instrução que está fora daquele contexto ou bloco que está inserido, sempre dentro de uma estrutura switch ou mesmo dentro de uma das estruturas de repetição.
+    </p>
+    <p>
+      O salto continue ao contrário do break, não desvia a instrução para fora da estrutura de repetição ou switch, ele apenas interrompe aquela parte específica e pula para a próxima iteração de forma imediata.
+    </p>
+
+</body>
+
+##### Estruturas e tipos de dados
+
+Em Java, temos duas divisões principais envolvendo os tipos de dados. Temos os tipos primitivos e os tipos complexos.
+
+Os tipos primitivos são aqueles que normalmente vêm em todas as linguagens. Estes são int, float, double, boolean, char, byte, short e long. Existem alguns outros tipos que também são bastante usados para a definição de variáveis, que são os arrays primitivos das linguagens, ou seja, definidos a partir de uma das keywords que foram apresentadas para os tipos primitivos e ainda o tipo String, que não é um tipo primitivo necessariamente, mas vem com a linguagem, com intuito de facilitar a vida do programador, sendo uma estrutura de dados completa para o tratamento do tipo string, que é uma cadeia de caracteres.
+
+Temos também os tipos complexos, ou tipos por referência, que são aqueles que através de variáveis de tipos por referência, armazenam as localizações de objetos na memória. Esses objetos referênciados podem ter várias variáveis de intância e métodos dentro do objeto apontado. Para conseguir acessá-los, é preciso ter uma referência a algum deles, e suas referências inicialmente são inicializadas como null.
+
+O Java fornece uma facilidade imensa para a criação de estruturas de dados complexas a partir das suas vinculações e composições de classes. Além disso fornece uma gama de estruturas já prontas para uso, facilitando bastante a vida do programador. Algumas delas são:
+
+- String que pode ser usado para "tipar" uma variável.
+- Collection que é um conjunto de interface e classes que funciona para representar e tratar um grupo de dados como uma única unidade. Com ele se pode usar coisas como um ArrayList que basicamente é um tipo de array para listar objetos ou até mesmo até outros arrays. Dentro desta ramificação temos ainda Set, Queue, Map, LinkedList, PriorityQueues e outros.
 
 ## Ecossistema
   + Maturidade
