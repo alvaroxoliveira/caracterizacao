@@ -66,8 +66,27 @@ Erlang ainda permite a atualização de codigo fonte com o sistema em execução
 Elixir é uma linguagem ótima para desenvolvimento de aplicações, tendo como objetivo ser de ótima escalabilidade, concorrente e tolerãncia a falhas. É uma linguagem ótima para o mercado por conta de todos esses recursos que deriva da Erlang e isso traz um valor imenso para o mercado. É uma linguagem que não é tão trivial de aprender como outras linguagens, então depende de um certo grau de senioridade para desenvolver com a linguagem, mas isso pode ser vantajoso muito pelo fato de ter uma certa garantia de qualidade e desempenho do software.
 
 ## Capacidades da Linguagem
-  + Metaprogramação
-  + Gerenciamento de Ciclo de Vida
+
+### Metaprogramação
+
+Metaprogramação é o processo de usar o código para escrever código. Em Elixir isso é incrivelmente possível, dando a capacidade de levar a linguagem a um nível de adequação às necessidades do programador alterando o código dinamicamente.
+
+O primeiro passo para a metaprogramação em elixir é a compreensão das representações das expressões. Ao ver mais a fundo a estrutura da linguagem, pode-se observar que a Árvore de Sintaxe Abstrata é composta de tuplas e essas tuplas por sua vez contém três partes: O nome da função, metadados e argumentos da função.
+
+O Elixir tem algumas funções que proporcionam a visualização dessas estruturas internas, as quais são ```quote``` e ```unquote```.
+
+Na primeira se passa a função e o retorno desta é uma tupla contendo a estrutura de como o elixir representa na árvore abstrata.
+
+A segunda faz totalmente o contrário, então ao passar uma estrutura interna, esta função retorna o código elixir respectivo para aquela estrutura.
+
+Outro recurso dentro desse mundo da metaprogramção são as macros. Na documentação oficial se aconselha ser moderado com os mesmos, mas ao entender as funções anteriores, o programador está pronto para entendê-lo.
+
+Macros são funções especiais destinadas a retornar uma expressão entre aspas que será inserida no aplicativo. Com isto, têm-se o necessário para estender Elixir e adicionar código dinâmicamente nas aplicações.
+
+### Gerenciamento de Ciclo de Vida
+
+
+
   + Segurança 
   + Performance
   + Escalabilidade
@@ -97,6 +116,28 @@ Elixir é uma linguagem ótima para desenvolvimento de aplicações, tendo como 
 
 ## Referências 
 
-1. https://www.gartner.com/en/documents/2071615/programming-languages 
-framework for assessing and characterizing programming languages and assessing their applicability to specific projects
+1. https://elixir-lang.org/
+2. https://www.hostgator.com.br/blog/elixir-linguagem-programacao-brasileira/
+3. https://medium.com/@marcelomg21/microsservi%C3%A7os-com-elixir-erlang-otp-beam-b76a5fb3bef
+4. https://latam.sinch.com/blog/elixir-brasil-o-funcional-encontra-se-aqui/
+5. https://www.lambda3.com.br/2016/07/elixir-tipos-operadores-e-o-iex/
+6. https://code.tutsplus.com/pt/tutorials/elixir-walkthrough-part-2-data-types--cms-27510
+7. https://ateliware.com/blog/tudo-que-voce-precisa-para-escolher-elixir
+8. https://deinfo.uepg.br/~alunoso/2020/SO/Erlang/erlang-site.html
+9. http://www.each.usp.br/petsi/jornal/?p=2459
+10. https://elixirschool.com/pt/lessons/advanced/metaprogramming/
+11. https://www.pravaler.com.br/por-que-o-pravaler-escolheu-a-linguagem-elixir/
+12. 
+13. 
+14. 
+15. 
+16. 
+17. 
+18. 
+19. 
+20. 
+21. 
+22. 
+23. 
+24. 
 
