@@ -9,13 +9,13 @@
 
 + Linguagem de Programação: <nome>
 
-  * [Apresentação e histórico](#apresenta--o-e-hist-rico)
-  * [Características da Linguagem](#caracter-sticas-da-linguagem)
+  * [Apresentação e histórico](#apresentação-e-histórico)
+  * [Características da Linguagem](#características-da-linguagem)
   * [Capacidades da Linguagem](#capacidades-da-linguagem)
   * [Produtividade do Desenvolvedor](#produtividade-do-desenvolvedor)
   * [Ecossistema](#ecossistema)
-  * [Informações Adicionais](#informa--es-adicionais)
-  * [Referências](#refer-ncias)
+  * [Informações Adicionais](#informações-adicionais)
+  * [Referências](#referências)
 
 ## Apresentação e histórico
 
