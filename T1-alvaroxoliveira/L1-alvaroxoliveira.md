@@ -382,8 +382,8 @@ Se temos uma classe produto que contem dois atributos, nome e preco, podemos ter
 
 ```
 public class Produto {
-  public String nome;
-  public float preco;
+  private String nome;
+  private float preco;
 
   public Produto(String nome, float preco) {
     this.nome = nome;
