@@ -264,24 +264,57 @@ Elixir é uma linguagem super confiável. É derivada do Erlang, uma linguagem m
 Dentre esses recursos podem ser citados a tolerância a falhas, onde basicamente o Elixir se destaca bastante, pelo fato das aplicações continuarem funcionando mesmo quando há presença de falhas na execução, o que é bastante importante, pois mantém a aplicação no ar. Outra coisa bastante importante são os multiplos processos criados pela VM, o que faz com que Elixir use todos os CPUs e garante escalabilidade e concorrência, além do garbage collection e da boa gerência de memória.
 
 ## Produtividade do Desenvolvedor
-  + Frameworks e Contâiners
-  + Ferramentas Disponíveis
-  + Sintaxe, Semântica e Operações Predefinidas
-    + Legibilidade
-    + Redigibilidade
-  + Custos 
+
+### Frameworks
+
+Elixir é uma linguagem de programação relativamente nova, mas que atraiu vários desenvolvedores por conta das vantagens de desenvolver na mesma. Com isso, muitos frameworks foram desenvolvidos e podemos citar alguns:
+
++ Phoenix: é um framework de desenvolvimento web moderno bastante conhecido pela comunidade, sendo um dos frameworks Elixir mais conhecidos no GitHub, com padrão de desenvolvimento semelhante ao MVC. 
++ Nerves: É uma estrutura Elixir focada no desenvolvimento de aplicativos simples e leves, com pouco ou absolutamente nenhum espaço de memória local.
++ Plug: é um framework que permite que estrutura se comuniquem entre as mesmas. Fornece pipelines ou conexões entre servidores e estruturas para peprmitir uma boa conexão e comunicação, permitindo que servidores Erlang se comuniquem perfeitamente com estruturas Elixir.
++ Trot: É um microframework Elixir que se tornou um dos mais populares nos ultimos anos. Essa façanha se deve pela facilidade incrível que tem de criar APIs de maneira muito fácil.
+
+### Ferramentas Disponíveis
+
+As ferramentas para desenvolvimento com Elixir são basicamente a instalação do Erlang, do próprio Elixir e também de um editor de Texto.
+
+O editor de texto mais utilizado no mercado para a função de escrita de código Elixir é o Visual Studio Code, ferramenta da microsoft, gratuita, que é de fácil configuração, além de contar com várias extensões e configurações da comunidade para se tornar um ambiente perfeito para programar em várias linguagens. Dentro do VS Code ainda é possível baixar extensões que ajudam a escrever código Elixir especificamente, tendo Linters e facilitadores que podem autocompletar código para o desenvolvedor, tornando o desenvolvimento mais prático.
+
+### Sintaxe, Semântica e Operações Predefinidas
+
+Elixir é uma linguagem com uma sintaxe um pouco diferente do que se vê em linguagens que derivam do C/C++. Isso claramente porque é uma linguagem com um paradigma um pouco diferente dessas linguagens e também por conta de herdar muita coisa do Erlang.
+
++ Para começar, aceita todos os operadores básicos: +, -, *, /;
++ Aceita operadores booleanos: && (and), || (or) e !(not)
++ Também vem com operadores de comparação: ==, !=, >=, <=, !==, ===, <, >.
++ Blocos são definidos com do end invés de chaves como acontece em linguagens convencionais.
+
+Seu código é dividido em módulos definidos da seguinte forma:
+
+```
+defmodule ModuleName do
+    # código
+end
+```
+
+Funções aninhadas ganham uma legibilidade muito grande com o pipe operator |>.
+
+Com o pipe operator, um valor pode ser passado por uma função, esse resultado da função pode ser passado para outra função e assim sucessivamente com esse operador, o que é um ganho de legibilidade incrível. Assim, ao invés de fazer funcao1(funcao2(funcao3)), se faz funcao1() |> funcao2() |> funcao3(). Muito mais legível.
+
+Não esquecendo do pattern matching que é uma ferramenta incrível também e que dá um suporte muito grande para o programador. Esse operador do Elixir faz o reconhecimento de padrões da linguagem e é uma ferramenta incrível para desestruturar tipos de dados complexos, o que pode ser uma "mão na roda" para o programador na hora de escrever um código e precisar de um determinado dado em uma estrutura.
+
+Com isso vemos que Sintaxe, semântica e legibilidade e redigibilidade de código não são um problema no Elixir, pois tem uma certa simplicidade, apesar de não ser trivial para iniciantes que normalmente vêem outros paradigmas antes.
 
 ## Ecossistema
-  + Maturidade
-  + Comunidade
-  + Governança
-  + Fragmentação
+### Maturidade
 
----
+É uma linguagem nova, porém carrega todo o legado do Erlang que é uma linguagem já estabelecida no mercado, o que torna uma vantagem para o Elixir. Isso é de grande valor agregado e faz com que a linguagem seja vista com bons olhos pelos desenvolvedores.
+
+### Comunidade
+
+Tem uma comunidade super ativa por todo o mundo. Uma das vantagens disso é que a própria documentação oficial é traduzida para várias línguas, o que faz com que desenvolvedores de todo o mundo se interessem em desenvolver com a linguagem. Além disso o Github é um lugar onde se tem muita interação da comunidade Elixir. Também há vários sites sobre a linguagem, fóruns pela internet, canais de ajuda em várias redes sociais, etc.
 
 ## Informações Adicionais
-
-
 ## Referências 
 
 1. https://elixir-lang.org/
@@ -295,17 +328,17 @@ Dentre esses recursos podem ser citados a tolerância a falhas, onde basicamente
 9. http://www.each.usp.br/petsi/jornal/?p=2459
 10. https://elixirschool.com/pt/lessons/advanced/metaprogramming/
 11. https://www.pravaler.com.br/por-que-o-pravaler-escolheu-a-linguagem-elixir/
-12. 
-13. 
-14. 
-15. 
-16. 
-17. 
-18. 
-19. 
-20. 
-21. 
-22. 
-23. 
-24. 
+12. https://elixirschool.com/pt/lessons/intermediate/concurrency
+13. https://blog.discord.com/scaling-elixir-f9b8e1e7c29b
+14. https://www.kabisa.nl/tech/when-elixirs-performance-becomes-rust-y/
+15. https://stressgrid.com/blog/benchmarking_go_vs_node_vs_elixir/
+16. https://medium.com/@_oleksii_/erlang-vm-tuning-guide-for-elixir-applications-89500066b5c3
+17. https://medium.com/true-henrique/elixir-10-motivos-para-aprender-6cd4d6876f05
+18. https://www.monterail.com/blog/why-elixir
+19. https://ateliware.com/blog/como-escalar-aplicacoes-em-elixir
+20. https://blog.back4app.com/pt/top-10-frameworks-para-elixir/
+21. https://elixir-lang.org/getting-started/pattern-matching.html
+22. https://learnxinyminutes.com/docs/pt-br/elixir-pt/
+23. https://elixir-lang.org/crash-course.html
+24. https://elixir-lang.org/getting-started/case-cond-and-if.html
 
