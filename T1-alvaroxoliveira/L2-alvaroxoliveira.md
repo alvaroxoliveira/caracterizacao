@@ -247,14 +247,21 @@ Essa coisa toda de processos individualiza muito a aplicação, e o uso deles no
 
 ### Performance
 
-Elixir é uma linguagem que proporciona uma performance muito grande. Muito disso é por conta do grande poder que a Erlang VM proporciona. 
+Elixir é uma linguagem que proporciona uma performance muito grande. Muito disso é por conta do grande poder que a Erlang VM proporciona. O fato de Elixir não compartilhar estados entre seus processos e estes se comunicarem através de trocas de mensagens, isso faz com que muita coisa seja simplificada. Essa estratégia certamente é uma das maiores vantagens do motivo do uso da Máquina Virtual Erlang, além do poder de que a concorrência da mesma proporciona, fazendo a linguagem ser bastante rápida e uma ótima opção para sistemas de grande escala, com milhões de usuários simultâneos.
 
-  + Performance
-  + Escalabilidade
-  + Confiabilidade
-  + Concorrência e Threading 
-  + Custos
-  _Custos aqui ... _
+### Escalabilidade Concorrência e Threading 
+
+Em escalabilidade Elixir é um grande destaque. Não é uma surpresa o motivo: Erlang VM. O fato de poder usar múltiplos processos faz com que se usem todos os núcleos de um nó com uma grande facilidade. Isso faz com que seja possível utilizar também múltiplos nós, o que facilita a criação de infraestruturas bastante parrudas e isso contém um efeito colateral positivo: ótima performace da aplicação.
+
+É muito comum a Erlang VM utilizar todas as CPUs da máquina, com milhares de processos que se comunicam através da troca de mensagens em uma aplicação Elixir.
+
+A concorrência é um dos pontos fortes do Elixir que graças (mais uma vez) ao Erlang VM, há uma facilidade muito grande para adaptar o código para a concorrência. O modelo de comunicação segue o modelo de Atores, processos isolados que se comunicam através de mensagens.
+
+### Confiabilidade
+  
+Elixir é uma linguagem super confiável. É derivada do Erlang, uma linguagem muito madura, presente no mercado há anos e bastante usada em telecomunicações por conta de vários recursos que tem por conta da sua máquina virtual.
+
+Dentre esses recursos podem ser citados a tolerância a falhas, onde basicamente o Elixir se destaca bastante, pelo fato das aplicações continuarem funcionando mesmo quando há presença de falhas na execução, o que é bastante importante, pois mantém a aplicação no ar. Outra coisa bastante importante são os multiplos processos criados pela VM, o que faz com que Elixir use todos os CPUs e garante escalabilidade e concorrência, além do garbage collection e da boa gerência de memória.
 
 ## Produtividade do Desenvolvedor
   + Frameworks e Contâiners
